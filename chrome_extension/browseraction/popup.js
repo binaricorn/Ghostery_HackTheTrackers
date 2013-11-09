@@ -19,6 +19,7 @@ $(function() {
         sendClicks();
     });
     
+    
     var objectIDarray = ["jCUiHfDH8Y", "3xO9WcjatS", "oSgbevAvgB"];
     
     Parse.initialize("WbXWyCHDLZJbApq74W1a95YkYekli5wDMhBGVYCj", "4iwEiCRAR2ynXQ6V4aqC5YdKkwkpvRUITUjgBkfR");
@@ -39,8 +40,14 @@ $(function() {
 		  	lifestyle_title = billingAccount.get("lifestyle_title");
 		  	lifestyle = billingAccount.get("lifestyle");
 		  	whereabouts = billingAccount.get("whereabouts");
+		  	
+		  	console.log(photo._url);
 
-		  	$('#tracking').append('<h1>' + name + '</h1>' + company);
+		  	$('#tracking').append('<h1 style="font-size:1em float: left;"><img src="'+ photo._url +'">' + name + '</h1>' + 
+		  		'<h3 style="margin-top: -20px; font-size: 0.6em;"> Title: ' + company + '</h3>' + 
+		  		'Article: <a style=" margin-top: -25px; " href="' + article_link + '"style="font-size: 1em; margin-top:0">' + article_header + '</a>' + 
+		  		'<h4> Politics: ' + political_leaning + '</h4>' + '<h5> Lifestyle: '+ lifestyle_title +'</h5>'+ '<h6> Whereabouts: ' + whereabouts + '</h6>'
+		  		);
 		  },
 		  error: function(object, error) {
 		    console.log("not found");

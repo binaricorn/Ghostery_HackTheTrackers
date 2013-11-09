@@ -10,8 +10,9 @@ chrome.runtime.onMessage.addListener(
 			$(document).mousemove(function(e) {
 			    window.x = e.pageX;
 			    window.y = e.pageY;
-			    $("body").append('<div id="eric"></div>');
-               	$('#eric').css({"width":"105px", "height":"105px", "background":"url('http://trytobegood.com/hack/eric_cursor.png') no-repeat", "top": window.y-25, "left": window.x+25, "z-index":"10000000", "position":"absolute"});
+			    $("body").append('<div id="dog"></div><div id="people"></div>');
+               	$('#dog').css({"width":"133px", "height":"79px", "background":"url('http://trytobegood.com/hack/fulldog.png') no-repeat", "top": window.y-25, "left": window.x+30, "z-index":"10000000", "position":"absolute"});
+               	
                	
 			});
 			
